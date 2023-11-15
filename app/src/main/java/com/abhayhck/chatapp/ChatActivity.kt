@@ -74,6 +74,7 @@ class ChatActivity : AppCompatActivity() {
 
             })*/
         sendBtn.setOnClickListener{
+            messageRecyclerView?.smoothScrollToPosition(messageAdapter?.itemCount ?: 0)
             val message = messageBox.text.toString()
             addMessageToDatabase(mDbRef, message, senderUid, roomId!!)
         }

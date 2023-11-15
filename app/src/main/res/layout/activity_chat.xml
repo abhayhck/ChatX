@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -31,14 +30,15 @@
             android:id="@+id/et_messageBox"
             android:layout_width="0dp"
             android:layout_height="50dp"
-            android:layout_weight="90"
             android:layout_margin="10dp"
+            android:layout_weight="90"
+            android:background="@drawable/message_box_bg"
+            android:hint="@string/ChatBoxHint"
+            android:importantForAutofill="no"
+            android:inputType="text"
             android:padding="8dp"
             android:textColor="@color/white"
-            android:background="@drawable/message_box_bg"
-            android:hint="Type a Message"
-            android:textColorHint="@color/lightText"
-            />
+            android:textColorHint="#BDBDBD" />
         <ImageView
             android:id="@+id/sendIv"
             android:layout_width="wrap_content"
@@ -46,7 +46,7 @@
             android:src="@drawable/ic_baseline_send_24"
             android:layout_weight="10"
             android:layout_gravity="center"
-            />
+            android:contentDescription="@string/send_button_description" />
 
     </LinearLayout>
 
